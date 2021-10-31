@@ -2,7 +2,8 @@ import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import ContactForm from './components/Contact';
 
 function App() {
 
@@ -20,12 +21,13 @@ function App() {
 
   return (
     <div>
-      <Nav 
-        categories ={categories}
+      <Nav
+        categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       />
       <main>
+        <ContactForm />
         <Gallery currentCategory={currentCategory} />
         <About />
       </main>
